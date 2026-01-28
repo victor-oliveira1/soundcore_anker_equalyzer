@@ -1,7 +1,7 @@
 import socket
 import sys
 
-addr = "18:9C:2C:XX:XX:XX"
+addr = "18:9C:2C:CE:31:87"
 port = 10
 presets = {
     'soundcore': '08ee00000002832000000078787878787878787800787878787878787878000b',
@@ -27,9 +27,21 @@ presets = {
     'amplificador_agudos': '08ee0000000283200014006464646e828c8ca0780076777777797a787d780036',
     'redutor_agudos': '08ee000000028320001500787878645a50503c78007878797677757771780055'
 }
-    
 
-eq_command = bytes.fromhex(presets[sys.argv[1]])
+if len(sys.argv) < 2:
+    print("Erro: Você precisa especificar um preset.")
+    print("\nPresets disponíveis:")
+    print(" • " + "\n • ".join(presets.keys()))
+    sys.exit(1)
+
+preset_escolhido = sys.argv[1].lower()
+
+if preset_escolhido not in presets:
+    print(f"Erro: O preset '{preset_escolhido}' não existe.")
+    print("Use um destes: " + ", ".join(presets.keys()))
+    sys.exit(1)
+
+eq_command = bytes.fromhex(presets[preset_escolhido])
 
 try:
     s = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
