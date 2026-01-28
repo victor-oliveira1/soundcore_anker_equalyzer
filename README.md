@@ -67,10 +67,8 @@ Este projeto não possui vínculo oficial com a Anker ou a marca Soundcore. Ele 
 ## 💡 Próximos Passos
 Pretendo implementar as seguintes melhorias:
 
-[ ] Interface gráfica (GUI): Criar uma janela com sliders para facilitar o uso.
-
-[ ] EQ Customizado: Implementar o cálculo de Checksum dinâmico para permitir qualquer ajuste de frequência.
-
-[ ] Auto-discovery: Sistema para encontrar o endereço MAC do fone automaticamente.
+* [ ] **Interface gráfica (GUI):** Criar uma janela com sliders para facilitar o uso.
+* [ ] **EQ Customizado:** Implementar o cálculo de Checksum dinâmico para permitir qualquer ajuste de frequência.
+* [ ] **Auto-discovery:** Sistema para encontrar o endereço MAC do fone automaticamente.
 
 Contribuições são muito bem-vindas! Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request.
