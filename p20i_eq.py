@@ -1,7 +1,7 @@
 import socket
 import sys
 
-addr = "18:9C:2C:CE:31:87"
+addr = "18:9C:2C:XX:XX:XX"
 port = 10
 presets = {
     'soundcore': '08ee00000002832000000078787878787878787800787878787878787878000b',
